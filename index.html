@@ -1,0 +1,249 @@
+<html><head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, target-densitydpi=medium-dpi"/>
+    <meta charset="utf-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <script src="./js/jquery-3.6.3.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <link type="text/css" rel="stylesheet" href="./css/main.css">
+    <link type="text/css" rel="stylesheet" href="./css/font.css">
+    <link type="text/css" rel="stylesheet" href="./css/slide.css">
+    <title>Chizizic_Jeju</title>
+  </head>
+  <body style="padding-left: px;margin-right: 0px;background-color: #ffff;">
+    <nav align="right" style="padding-left: 1%;padding-top: 1%;padding-right: 1%;padding-bottom: 1%;">
+      <div style="display: inline-block; color: #878282;">
+        <span align="center" style="width: 125px;padding-bottom: 5px;border-bottom: none;"><b style="font-size: 0.55em;font-family: 'Vitro_pride';" onclick="toggle_language()">Language</b></span>
+        <div id="test">
+
+        </div>
+<p id="language" align="center" style="
+    font-size: 0.4em;
+    background-color: #fff;
+    padding-bottom: 6px;
+    position: absolute;
+    width: 125px;
+    display: none;
+">
+    <a style="
+    display: block;
+" onclick="changeLanguage('korean')">한국어</a><a style="
+    display: block;
+" onclick="changeLanguage('english')">English</a>
+<a style="
+    display: block;
+" onclick="changeLanguage('chinese')">中国话</a>
+<a style="
+    display: block;
+" onclick="changeLanguage('japanese')">日本語</a>
+</p></div></nav>
+
+    <div class="title">
+      <div align="center" style="padding-top: 10%;padding-bottom: 10%;padding-left: 5%;padding-right: 5%;background-color: #bed3f1;color:white;font-weight: bold;font-family:sans-serif;margin-top: 0px;">
+        <img src="./img/main/chizizic.png" style="width: 100%;">
+        <!--<span style="font-size: 3em; display: none;">치지직</span>-->
+        <span id="slogan" style="padding-top: 4%;font-family: 'SF_HailSnow';font-size: 0.55em;">우리의 설레임이 구워지는 소리</span></div></div>
+    <div class="contents">
+      <div align="center" id="storeDescription" style="font-family: 'Vitro_pride';">
+          <span class="businessHours">영업시간 : 오전 11시 ~ 오후 9시<br>(라스트 오더 : 오후 8시 30분)</span>
+          <span class="holiday">휴무일 : 매주 화요일</span>
+          <span><img src="./img/main/instagram__icon.png" style="width: 25px;">
+            <a href="https://www.instagram.com/chizizic_jeju">chizizic_jeju</a></span></div>
+      <div id="mainMenus" style="font-family: 'Vitro_pride';">
+        <span align="center"><b style="font-size: 0.7em;">&lt; MENU &gt;</b></span>
+      <div id="dongmoonSousVideSteak" class="menu" align="center">
+        <div class="menu1 album">
+          <div class="images">
+            <img src="./img/Menu List/1.Steak/Steak 1.jpg">
+            <img src="./img/Menu List/1.Steak/Steak 2.jpg">
+            <img src="./img/Menu List/1.Steak/Steak 3.jpg">
+          </div>
+        </div>
+          <span class="menuName">동문 수테이크</span>
+          <span class="menuPrice">14,000원</span>
+          <div class="info">
+            <span>수비드로 조리한<br>제주산 돼지 안심 스테이크와<br>양송이 크림소스의 만남</span>
+          </div>
+      </div>
+      <div id="eggInHell" class="menu" align="center">
+        <div class="menu2 album">
+          <div class="images">
+            <img src="./img/Menu List/2.EggInHell/EggInHell1.jpg">
+              <img src="./img/Menu List/2.EggInHell/EggInHell2.jpg">
+              <img src="./img/Menu List/2.EggInHell/EggInHell3.jpg">
+          </div>
+        </div>
+          <span class="menuName">에그인헬</span>
+          <span class="menuPrice">10,000원</span>
+          <div class="info">
+            <span>토마토소스에 각종 야채와 향신료를 넣고,<br>반숙계란을 올린 스튜</span>
+          </div>
+        </div>
+
+        <span align="center"><b style="font-size: 0.7em;">&lt; Drink &gt;</b></span>
+        <div id="cocaCola" class="menu" align="center">
+          <span class="menuName">코카콜라(355ml)</span>
+          <span class="menuPrice">2,000원</span>
+        </div>
+        <div id="chilsungSprite" class="menu" align="center">
+          <span class="menuName">칠성사이다(355ml)</span>
+          <span class="menuPrice">2,000원</span>
+        </div>
+
+        <span align="center"><b style="font-size: 0.7em;">&lt; Glass Wine &gt;</b></span>
+        <div id="chilsungSprite" class="menu" align="center">
+          <span class="menuName">쉬라즈(레드)</span>
+          <span class="menuPrice">7,000원</span>
+        </div>
+        <div id="chilsungSprite" class="menu" align="center">
+          <span class="menuName">쇼비뇽블랑(화이트)</span>
+          <span class="menuPrice">7,000원</span>
+        </div>
+      </div>
+    </div>
+  <script>
+  const images = document.getElementsByClassName("images");
+  var imageWidths = new Array;
+
+  for (var i = 0; i < images.length; i++) {
+    var image = images[i];
+    imageWidths[i] = image.width;
+  /*  image.addEventListener('touchstart', touch_start);
+    image.addEventListener('touchend', touch_end);*/
+  }
+
+  var albums = $(".album");
+for (var i = 0; i < albums.length; i++) {
+  albums[i].addEventListener('touchstart', touch_start);
+  albums[i].addEventListener('touchend', touch_end);
+}
+
+
+
+  let curPos = 0;
+  let postion = 0;
+  let start_x, end_x;
+
+  function prev(targetElement){
+    if (curPos > 0) {
+      curPos--;
+    }
+    else {
+      curPos = 2;
+    }
+    targetElement.style.transform = 'translateX('+-(curPos*targetElement.clientWidth)+'px)';
+  }
+
+  function next(targetElement){
+    if (curPos < 2) {
+      curPos++;
+    }
+    else {
+      curPos = 0;
+    }
+    targetElement.style.transform = 'translateX('+-(curPos*targetElement.clientWidth)+'px)';
+  }
+
+  function touch_start(event) {
+
+    start_x = event.touches[0]?.pageX;
+  }
+
+  function touch_end(event) {
+    end_x = event.changedTouches[0].pageX;
+    if (start_x == end_x) {
+      return;
+    }
+
+    if (start_x > end_x) {
+      next(event.target.parentNode);
+    }
+    else {
+      prev(event.target.parentNode);
+    }
+  }
+
+  const language = document.getElementById("language");
+
+  function toggle_language(){
+    if (language.style.display == 'none') {
+      language.style.display = 'block';
+      language.previousElementSibling.style.borderBottom = 'groove';
+    }
+    else if (language.style.display == 'block') {
+      language.style.display = 'none';
+      language.previousElementSibling.style.borderBottom = 'none';
+    }
+  }
+
+  function changeLanguage(language){
+    var slogan = $("#slogan")[0];
+
+    var businessHours = $("#storeDescription .businessHours")[0];
+    var holiday = $("#storeDescription .holiday")[0];
+
+    var dongmoonSousVideSteakName = $("#dongmoonSousVideSteak .menuName")[0];
+    var dongmoonSousVideSteakPrice = $("#dongmoonSousVideSteak .menuPrice")[0];
+    var dongmoonSousVideSteakInfo = $("#dongmoonSousVideSteak .Info")[0];
+
+    var eggInHellName = $("#eggInHell .menuName")[0];
+    var eggInHellPrice = $("#eggInHell .menuPrice")[0];
+    var eggInHellInfo = $("#eggInHell .Info")[0];
+    switch (language) {
+      case 'korean':
+        slogan.innerText = "우리의 설레임이 구워지는 소리";
+        businessHours.innerText = "영업시간 : 오전 11시 ~ 오후 9시\r\n(라스트 오더 : 오후 8시 30분)";
+        holiday.innerText = "휴무일 : 매주 화요일";
+
+        dongmoonSousVideSteakName.innerText = "동문 수테이크";
+        dongmoonSousVideSteakPrice.innerText = "14,000원";
+        dongmoonSousVideSteakInfo.innerText = "수비드로 조리한\r\n제주산 돼지 안심 스테이크와\r\n양송이 크림소스의 만남";
+
+        eggInHellName.innerText = "에그인헬";
+        eggInHellPrice.innerText = "10,000원";
+        eggInHellInfo.innerText = "토마토소스에 각종 야채와 향신료를 넣고, \r\n 반숙계란을 올린 스튜";
+        break;
+      case 'english':
+        slogan.innerText = "Grilling sound that blows your mind";
+        businessHours.innerText = "Welcome : AM 11:00 ~ PM 09:00\r\n(Last order : PM 08:30)";
+        holiday.innerText = "Holiday : Every Tuesday";
+
+        dongmoonSousVideSteakName.innerText = "Dongmoon Sous-Vide Steak";
+        dongmoonSousVideSteakPrice.innerText = "14,000won";
+        dongmoonSousVideSteakInfo.innerText = "Jeju pork tenderloin steak cooked under vacuum served with mushroom cream sauce";
+
+        eggInHellName.innerText = "Egg In Hell";
+        eggInHellPrice.innerText = "10,000won";
+        eggInHellInfo.innerText = "Stew with fresh vegetables seasoned with spices & Tomato Sauce topped with sunny side up";
+        break;
+      case 'japanese':
+        slogan.innerText = "私たちをトキメかせる音、ジュー";
+        businessHours.innerText = "営業時間:午前11時~午後9時\r\n(ラストオーダー:午後8時30分)";
+        holiday.innerText = "休業日:毎週火曜日";
+
+        dongmoonSousVideSteakName.innerText = "東門ステーキ";
+        dongmoonSousVideSteakPrice.innerText = "14,000ウォン";
+        dongmoonSousVideSteakInfo.innerText = "スーヴィードで調理した済州産豚ヒレステーキとマッシュルームクリームソースの出会い";
+
+        eggInHellName.innerText = "シャクシュカ";
+        eggInHellPrice.innerText = "10,000ウォン";
+        eggInHellInfo.innerText = "細かく刻んだ野菜をスパイスを効かせたトマトソースで軽く煮込み、その上に卵を落として焼いたシチュー";
+        break;
+      case 'chinese':
+        slogan.innerText = "我们的悸动 烤的声音";
+        businessHours.innerText = "营业时间 : 上午11点~下午9点\r\n(最后订单 下午8点30分)";
+        holiday.innerText = "休息日 : 每周二";
+
+        dongmoonSousVideSteakName.innerText = "东门牛排";
+        dongmoonSousVideSteakPrice.innerText = "14,000韩元";
+        dongmoonSousVideSteakInfo.innerText = "用低温慢煮 制作的 济州产猪里脊\r\n牛排和洋松茸 奶油酱的相遇";
+
+        eggInHellName.innerText = "北非蛋";
+        eggInHellPrice.innerText = "10,000韩元";
+        eggInHellInfo.innerText = "各种蔬菜和香料 加上半熟鸡蛋和番茄酱 融合而成的炖菜";
+        break;
+    }
+    toggle_language();
+  }
+  </script>
+</body></html>
